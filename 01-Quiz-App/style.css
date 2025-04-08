@@ -1,0 +1,105 @@
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Main container */
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  width: 400px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Quiz title */
+h1 {
+  color: #00ffff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.5);
+}
+
+/* Question text */
+#question {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+/* Choice buttons */
+#choices button {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  width: 100%;
+  background: rgba(0, 255, 255, 0.08);
+  border: 2px solid #00ffff;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.2);
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+}
+
+#choices button:hover {
+  background-color: #00ffff;
+  color: #000;
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
+/* Next and Restart buttons */
+#nextBtn, #restartBtn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #00ffff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+#nextBtn:hover, #restartBtn:hover {
+  background-color: #00e6e6;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+}
+
+/* Result text */
+#result {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Timer */
+#timer {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* Hidden elements */
+.hidden {
+  display: none;
+}
