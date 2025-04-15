@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Press Start 2P', monospace;
+  background: radial-gradient(circle, #111, #000);
+  color: #00f2ff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #00f2ff;
+  text-shadow: 0 0 3px #00f2ff, 0 0 5px #00f2ff;
+  margin-bottom: 1rem;
+}
+
+.between {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 1rem;
+}
+
+.number {
+  font-size: 6rem;
+  width: 15rem;
+  height: 15rem;
+  background: #00f2ff;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px #00f2ff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* MAIN SECTION */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left,
+.right {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* INPUT */
+.guess {
+  background: transparent;
+  border: 3px solid #00f2ff;
+  color: #00f2ff;
+  font-size: 3rem;
+  padding: 1.2rem;
+  width: 22rem;
+  text-align: center;
+  outline: none;
+  box-shadow: 0 0 5px #00f2ff;
+}
+
+/* BUTTONS */
+.btn {
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding: 1.5rem 3rem;
+  margin-top: 1rem;
+  border: none;
+  background: #00f2ff;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 0 5px #00f2ff;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #00bfd6;
+  box-shadow: 0 0 8px #00bfd6;
+}
+
+.again {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+/* TEXT */
+.message {
+  font-size: 1.8rem;
+  margin: 2rem 0;
+  min-height: 2rem;
+  text-shadow: 0 0 5px #00f2ff;
+}
+
+.label-score,
+.label-highscore {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+/* Balloon icon style */
+.balloon {
+    position: absolute;
+    top: -150px; /* Start off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem; /* Icon size */
+    color: #ff3b30; /* Balloon color */
+    transition: top 2s ease-in-out, transform 2s ease-in-out;
+  }
+  
+  /* Balloon falling animation */
+  .balloon.falling {
+    top: 60vh; /* Final position, falling to center */
+    transform: translateX(-50%) scale(1.2);
+  }
+  
