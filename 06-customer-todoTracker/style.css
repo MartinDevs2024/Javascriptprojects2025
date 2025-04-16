@@ -1,0 +1,103 @@
+/* General Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0f1c, #1a1a2e);
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Completed Badge */
+.completed-badge {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00ffab, #00f0ff);
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.completed-badge:hover {
+  transform: scale(1.05);
+}
+
+/* To-Do Item Container */
+#customerListTab .todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  margin-bottom: 15px;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+#customerListTab .todo-item:hover {
+  transform: translateY(-3px);
+}
+
+/* Button Container */
+.todo-item .actions {
+  display: flex;
+}
+
+/* Buttons */
+.edit-button, .delete-button {
+  padding: 8px 14px;
+  margin-left: 10px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.edit-button {
+  background: linear-gradient(to right, #28a745, #3df9a0);
+  border-radius: 20px;
+}
+
+.delete-button {
+  background: linear-gradient(to right, #dc3545, #ff6b81);
+  border-radius: 20px;
+}
+
+.edit-button:hover, .delete-button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .completed-badge {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  #customerListTab .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-item .actions {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .completed-badge {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+}

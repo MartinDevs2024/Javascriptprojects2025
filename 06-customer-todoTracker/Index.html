@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer To-Do Tracker</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Customer To-Do Tracker</h1>
+
+    <!-- Input form -->
+    <div class="row mb-4">
+      <div class="col-md-5">
+        <input type="text" id="customerName" class="form-control" placeholder="Enter customer name" required>
+      </div>
+      <div class="col-md-5">
+        <select id="todoStatus" class="form-control">
+          <option value="Not Complete">Not Complete</option>
+          <option value="Complete">Complete</option>
+          <option value="No Home">No Home</option>
+          <option value="Reschedule">Reschedule</option>
+          <option value="Order Parts">Order Parts</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button onclick="addTodo()" class="btn btn-primary w-100">Add To-Do</button>
+      </div>
+    </div>
+
+    <!-- Tabs for switching between Pie Chart and Customer List -->
+    <ul class="nav nav-tabs mb-3">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#customerListTab">Customer List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#pieChartTab">Pie Chart</a>
+      </li>
+    </ul>
+
+    <!-- Tab content -->
+    <div class="tab-content">
+      <!-- Customer List Tab -->
+      <div id="customerListTab" class="tab-pane fade show active">
+        <h2>Customer To-Do List</h2>
+        <div id="todoList" class="list-group"></div>
+      </div>
+
+      <!-- Pie Chart Tab -->
+      <div id="pieChartTab" class="tab-pane fade">
+        <h2>Tasks Per Customer</h2>
+        <canvas id="taskChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+
+    <!-- Completed Tasks Badge -->
+    <div id="completedCount" class="badge badge-success position-fixed" style="top: 20px; right: 20px;">
+      0 Completed
+    </div>
+  </div>
+
+  <!-- Bootstrap JS & Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.11/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
