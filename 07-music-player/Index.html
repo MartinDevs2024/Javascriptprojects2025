@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music-Player</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="music-player">
+                <nav>
+                    <div class="circle">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="circle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+    
+                <!-- Song Selector -->
+                <select id="songSelector">
+                    <option value="drop-it-124014.mp3">Drop It</option>
+                    <option value="Despacito.mp3">Despacito</option>
+                </select>
+    
+                <img id="song-img" src="media/thumbnail.png" class="song-img">
+                <h1 id="song-title">Despacito</h1>
+                <p id="song-artist">Luis Fonsi Ft. Puerto Rican</p>
+    
+                <audio id="song" controls>
+                    <source id="song-source" src="media/drop-it-124014.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+    
+                <input type="range" value="0" id="progress">
+                <div class="controls">
+                    <div><i class="fas fa-backward"></i></div>
+                    <div onclick="playPause()"><i class="fas fa-play" id="ctrlIcon"></i></div>
+                    <div><i class="fas fa-forward"></i></div>
+                </div>
+            </div>
+        </div>
+    <script src="main.js"></script>
+</body>
+</html>
