@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vanilla JS Table Filter & Sort</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th class="numeric" data-column="0"><span>ID#</span></th>
+        <th data-column="1"><span>Product</span></th>
+        <th class="numeric" data-column="2"><span>Quantity</span></th>
+        <th class="numeric" data-column="3"><span>Price</span></th>
+      </tr>
+      <tr>
+        <th><input type="text" placeholder="Filter ID#"></th>
+        <th><input type="text" placeholder="Filter Product"></th>
+        <th><input type="text" placeholder="Filter Quantity"></th>
+        <th><input type="text" placeholder="Filter Price"></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <p>* ID#, Quantity, and Price filters work on values greater than input.</p>
+  <p>* Product filter works on substring match.</p>
+
+  <script src="app.js"></script>
+</body>
+</html>
