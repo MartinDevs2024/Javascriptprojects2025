@@ -4,38 +4,69 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
   }
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px 30px 70px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.37);
+  color: #fff;
+}
+
+.todo-app h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #f8f8f8;
+  text-shadow: 0 0 5px #00f2fe, 0 0 10px #00f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-  .container {
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .todo-app {
-    width: 100%;
-    max-width: 540px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 40px 30px 70px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-    color: #fff;
-  }
-  
-  .todo-app h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #f8f8f8;
-    text-shadow: 0 0 5px #00f2fe, 0 0 10px #00f2fe;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Push text left, image right */
-  }
   
   .todo-app h2 img {
     width: 32px;
