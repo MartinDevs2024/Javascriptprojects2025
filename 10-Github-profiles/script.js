@@ -46,13 +46,13 @@ const createUserCard = (user) => {
         </div>`;
     main.innerHTML = cardHTML;
 }
-function createErrorCard(msg) {
+const createErrorCard= (msg) => {
     const cardHTML = `<div class="card">
                      <h1>${msg}</h1>
                     </div>`
      main.innerHTML = cardHTML;
 }
-function addReposToCard(repos) {
+const addReposToCard = (repos) => {
     const reposEl = document.getElementById('repos');    
     repos.slice(0,5)
       .forEach(repo => {
