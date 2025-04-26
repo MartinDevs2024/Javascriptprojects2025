@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
+    color: #ffffffcc;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    backdrop-filter: blur(5px);
+}
+
+.user-form{
+    width: 100%;
+    max-width: 700px;
+}
+
+.user-form input {
+    width: 100%;
+    display: block;
+    background: rgba(76, 40, 133, 0.2);
+    border: 1px solid #8e44ad;
+    border-radius:  12px;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow: 0 0 12px rgba(142, 68, 173, 0.3);
+    transition:  all 0.3s ease;
+}
+
+.user-form input::placeholder {
+    color: #aaa;
+}
+
+.card {
+    max-width: 800px;
+    background: rgba(76, 40, 133, 0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    display: flex;
+    padding: 3rem;
+    margin: 0 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);;
+}
+
+.avatar{
+    border-radius: 50%;
+    border: 6px solid #8e44ad;
+    height: 150px;
+    width: 150px;
+    box-shadow: 0 0 20px #8e44ad;
+}
+
+.user-info{
+    color: #e0e0e0;
+    margin-left: 2rem;
+}
+
+.user-info h2 {
+    margin-top: 0;
+    color: #ffffff;
+    text-shadow: 0 0 5px #9b59b6;
+}
+
+.user-info ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 400px;
+}
+
+.user-info ul li {
+    display: flex;
+    align-items:center;
+}
+
+.user-info ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    color: #f1c40f;
+}
+
+.repo {
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    border-radius: 6px;
+    box-shadow:  0 0 10px rgba(52, 152, 219, 0.4);
+    transition: transform 0.2s ease;
+}
+
+.repo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(142, 68, 173, 0.6);
+}
+
+@media(max-width: 500px) {
+    .card{
+        flex-direction: column;
+        align-items: center;
+    }
+    .user-form{
+        max-width: 400px;
+    }
+    .user-info {
+        margin-left: 0;
+        text-align: center;
+    }
+    .user-info ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
